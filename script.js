@@ -3,8 +3,19 @@ document.getElementById('first-class-increase').addEventListener('click', functi
     const firstClassCount = parseInt(firstClassInput.value);
     const newFirstClassCount = firstClassCount + 1;
     firstClassInput.value = newFirstClassCount;
-    const firstClassTotal = newFirstClassCount * 150;
-    // calculateTotal();
+    // const firstClassIncreaseTotal = newFirstClassCount + 150;
+    const subTotalInput = document.getElementById('sub-total');
+    const subTotalCount = parseInt(subTotalInput.innerText);
+    const subTotal = subTotalCount + 150;
+    document.getElementById('sub-total').innerText = subTotal;
+    const vat = subTotal * 0.1;
+    document.getElementById('vat').innerText = vat;
+    const total = subTotal + vat;
+    document.getElementById('total').innerText =  total;
+
+
+ 
+    
     
 })
 
@@ -17,38 +28,62 @@ document.getElementById('first-class-decrease').addEventListener('click', functi
     }
     
     firstClassInput.value = newFirstClassCount;
-    const firstClassTotal = newFirstClassCount * -150;
+    // const firstClassDecreaseTotal = newFirstClassCount * 150;
+    const subTotalInput = document.getElementById('sub-total');
+    const subTotalCount = parseInt(subTotalInput.innerText);
+    if(subTotalCount>0){
+        const subTotal = subTotalCount - 150;
+        document.getElementById('sub-total').innerText = subTotal;
+        const vat = subTotal * 0.1;
+        document.getElementById('vat').innerText = vat;
+        const total = subTotal + vat;
+        document.getElementById('total').innerText =  total;
 
+    }
+ 
 
 })
 
 
 
 document.getElementById('economy-class-increase').addEventListener('click', function(){
-    const firstClassInput = document.getElementById('economy-class-count');
-    const firstClassCount = parseInt(firstClassInput.value);
-    const newFirstClassCount = firstClassCount + 1;
-    firstClassInput.value = newFirstClassCount;
-    const economyClassTotal = newFirstClassCount * 100;
+    const economyClassInput = document.getElementById('economy-class-count');
+    const economyClassCount = parseInt(economyClassInput.value);
+    const newEconomyClassCount = economyClassCount + 1;
+    economyClassInput.value = newEconomyClassCount;
+    // const economyClassIncreaseTotal = newEconomyClassCount * 100;
+    const subTotalInput = document.getElementById('sub-total');
+    const subTotalCount = parseInt(subTotalInput.innerText);
+    const subTotal = subTotalCount + 100;
+    document.getElementById('sub-total').innerText = subTotal;
+    const vat = subTotal * 0.1;
+    document.getElementById('vat').innerText = vat;
+    const total = subTotal + vat;
+    document.getElementById('total').innerText =  total;
+ 
 })
 
 document.getElementById('economy-class-decrease').addEventListener('click', function(){
-    const firstClassInput = document.getElementById('economy-class-count');
-    const firstClassCount = parseInt(firstClassInput.value);
-    if(firstClassCount>0)
+    const economyClassInput = document.getElementById('economy-class-count');
+    const economyClassCount = parseInt(economyClassInput.value);
+    if(economyClassCount>0)
     {
-        newFirstClassCount = firstClassCount - 1;
+        newEconomyClassCount = economyClassCount - 1;
     }
     
-    firstClassInput.value = newFirstClassCount;
-    const economyClassTotal = newFirstClassCount * -100;
+    economyClassInput.value = newEconomyClassCount;
+    // const economyClassDecreaseTotal = newEconomyClassCount * 100;
+    const subTotalInput = document.getElementById('sub-total');
+    const subTotalCount = parseInt(subTotalInput.innerText);
+    if(subTotalCount>0){
+        const subTotal = subTotalCount - 100;
+        document.getElementById('sub-total').innerText = subTotal;
+        const vat = subTotal * 0.1;
+        document.getElementById('vat').innerText = vat;
+        const total = subTotal + vat;
+        document.getElementById('total').innerText =  total;
+
+    }
 
 })
 
-// function calculateTotal(){
-//     const subTotalInput = document.getElementById('sub-total');
-//     const subTotalCount = parseInt(subTotalInput.innerText);
-//     subTotalCount = subTotalCount + currentTotal;
-//     console.log(subTotalCount);
-
-// }
