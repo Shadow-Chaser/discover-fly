@@ -87,3 +87,11 @@ document.getElementById('economy-class-decrease').addEventListener('click', func
 
 })
 
+
+// Booking Area
+document.getElementById('booking-button').addEventListener('click', function(){
+    const mainArea = document.getElementById('main-area');
+    mainArea.style.display = "none";
+    mainArea.style.background = "none";
+})
+
