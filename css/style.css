@@ -7,12 +7,12 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background:url("images/bg.png");
+    /* background:url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
-    
+     */
 }
 
 nav{
@@ -123,7 +123,16 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+#main-area{
+    background:url("images/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    
 
+}
 #post-booking-page{
     display: none;
+    margin: 250px;
 }
