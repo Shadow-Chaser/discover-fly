@@ -93,5 +93,6 @@ document.getElementById('booking-button').addEventListener('click', function(){
     const mainArea = document.getElementById('main-area');
     mainArea.style.display = "none";
     mainArea.style.backgroundSize = "contain";
+    mainArea.
 })
 
