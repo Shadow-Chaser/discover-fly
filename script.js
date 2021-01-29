@@ -92,6 +92,6 @@ document.getElementById('economy-class-decrease').addEventListener('click', func
 document.getElementById('booking-button').addEventListener('click', function(){
     const mainArea = document.getElementById('main-area');
     mainArea.style.display = "none";
-    mainArea.style.background = "none";
+    mainArea.style.backgroundSize = "contain";
 })
 
